@@ -16,11 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.expensemanager.R;
 import com.example.expensemanager.UpdateDeleteActivity;
 import com.example.expensemanager.adapter.RecycleViewAdapter;
-import com.example.expensemanager.dal.SQLiteHelper;
 import com.example.expensemanager.adapter.RecycleViewAdapter.Item;
+import com.example.expensemanager.dal.SQLiteHelper;
 
-import java.util.Date;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -73,7 +74,7 @@ public class FragmentHome extends Fragment implements RecycleViewAdapter.ItemLis
     public void onItemClick(View view, int position) {
         Item item = adapter.getItem(position);
         Intent intent = new Intent(getActivity(), UpdateDeleteActivity.class);
-        intent.putExtra("item", (CharSequence) item);
+        intent.putExtra("item",(Serializable) item);
         startActivity(intent);
     }
 

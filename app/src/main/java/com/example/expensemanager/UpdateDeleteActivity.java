@@ -90,9 +90,11 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
                 Date.setText(date);
             }, year, month, day);
             dialog.show();
-        } else if (view == btBack) {
+        }
+        if (view == btBack) {
             finish();
-        } else if (view == btUpdate) {
+        }
+         if (view == btUpdate) {
             String t = Title.getText().toString();
             String p = Price.getText().toString();
             String c = sp.getSelectedItem().toString();
@@ -104,7 +106,8 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
                 db.update(i);
                 finish();
             }
-        } else if (view == btRemove) {
+        }
+         if (view == btRemove) {
             int id = item.getId();
             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
             builder.setTitle("Thông báo xóa");
