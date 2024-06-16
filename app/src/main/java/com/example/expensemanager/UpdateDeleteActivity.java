@@ -45,7 +45,7 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
         Date.setOnClickListener(this);
 
         Intent intent = getIntent();
-        item = (Item) intent.getSerializableExtra("item");  // Ép kiểu về Item
+        item = (Item) intent.getSerializableExtra("Item");  // Ép kiểu về Item
         Title.setText(item.getTitle());
         Price.setText(item.getPrice());
         Date.setText(item.getDate());

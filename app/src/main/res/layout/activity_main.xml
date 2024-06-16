@@ -30,6 +30,6 @@
         android:layout_marginRight="20dp"
         android:backgroundTint="@color/yellow"
         android:src="@drawable/them"
-
         />
+
 </RelativeLayout>

@@ -15,25 +15,36 @@ import java.util.List;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "ChiTieu.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public SQLiteHelper(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, "ChiTieu.db", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE items(" +
+        // Tạo bảng items
+        String sqlItems = "CREATE TABLE items (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "title TEXT, " +
                 "category TEXT, " +
                 "price TEXT, " +
                 "date TEXT)";
-        db.execSQL(sql);
+        db.execSQL(sqlItems);
+
+        // Tạo bảng User
+        String sqlUser = "CREATE TABLE User (" +
+                "Username TEXT NOT NULL, " +
+                "Password TEXT NOT NULL)";
+        db.execSQL(sqlUser);
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS items");
+        db.execSQL("DROP TABLE IF EXISTS User");
+        onCreate(db);
         // Handle database upgrade as needed
     }
 
@@ -41,6 +52,15 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public void onOpen(SQLiteDatabase db) {
 
         super.onOpen(db);
+    }
+    public boolean insertUser( String username, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Username", username);
+        contentValues.put("Password", password);
+        long result = db.insert("User", null, contentValues);
+        db.close();
+        return result != -1;
     }
 
     // Lay tat ca theo thoi gian

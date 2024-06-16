@@ -15,8 +15,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.expensemanager.AddActivity;
-import com.example.expensemanager.adapter.ViewPagerAdapter;
 import com.example.expensemanager.R;
+import com.example.expensemanager.adapter.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigationView;
     private ViewPager viewPager;
     private FloatingActionButton fab;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +40,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+
         navigationView = findViewById(R.id.bottom_nav);
         viewPager = findViewById(R.id.viewpager);
         fab = findViewById(R.id.fab);
+
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

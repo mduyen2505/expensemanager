@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.expensemanager.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,7 +85,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
     // Assuming you have a custom Item class
-    public static class Item {
+    public static class Item implements Serializable {
         private String title;
         private String category;
         private String price;
