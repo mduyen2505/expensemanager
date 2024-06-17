@@ -133,4 +133,54 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("items", whereClause, whereArgs);
     }
+
+    public List<RecycleViewAdapter.Item> searchByTitle(String key) {
+        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+        String whereClause = "title like ?";
+        String[] whereArgs = {"%"+key+"%"};
+        SQLiteDatabase st = getReadableDatabase();
+        Cursor rs = st.query("items", null, whereClause, whereArgs, null, null, null);
+        while (rs != null && rs.moveToNext()) {
+            int id = rs.getInt(0);
+            String title = rs.getString(1);
+            String category = rs.getString(2);
+            String price = rs.getString(3);
+            String date =rs.getString(4);
+            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+        }
+        return list;
+    }
+    public List<RecycleViewAdapter.Item> searchByCategory(String Category) {
+        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+        String whereClause = "Category like ?";
+        String[] whereArgs = {Category};
+        SQLiteDatabase st = getReadableDatabase();
+        Cursor rs = st.query("items", null, whereClause, whereArgs, null, null, null);
+        while (rs != null && rs.moveToNext()) {
+            int id = rs.getInt(0);
+            String title = rs.getString(1);
+            String category = rs.getString(2);
+            String price = rs.getString(3);
+            String date =rs.getString(4);
+            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+        }
+        return list;
+    }
+    public List<RecycleViewAdapter.Item> searchByDateFromTo(String from, String to) {
+        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+        String whereClause = "date BETWEEN ? AND ?";
+        String[] whereArgs = {from.trim(),to.trim()};
+        SQLiteDatabase st = getReadableDatabase();
+        Cursor rs = st.query("items", null, whereClause, whereArgs, null, null, null);
+        while (rs != null && rs.moveToNext()) {
+            int id = rs.getInt(0);
+            String title = rs.getString(1);
+            String category = rs.getString(2);
+            String price = rs.getString(3);
+            String date =rs.getString(4);
+            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+        }
+        return list;
+    }
+
 }
