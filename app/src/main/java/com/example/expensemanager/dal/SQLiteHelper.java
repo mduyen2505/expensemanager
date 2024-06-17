@@ -63,6 +63,18 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
+    public boolean checkUser(String username, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM User WHERE Username = ? AND Password = ?", new String[]{username, password});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
+
+
+
+
     // Lay tat ca theo thoi gian
     public List<RecycleViewAdapter.Item> getAll() {
         List<RecycleViewAdapter.Item> list = new ArrayList<>();
