@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="vertical"
-        android:background="@color/yellow">
+        android:background="@drawable/gradient">
 
         <TextView
             android:layout_width="match_parent"
@@ -18,8 +18,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:text="Danh sách chi tiêu"
-            android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:textColor="@android:color/black"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <!-- Replace the CardView with PieChart -->

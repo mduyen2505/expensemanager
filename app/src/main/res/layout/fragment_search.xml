@@ -11,7 +11,10 @@
         android:id="@+id/search"
         android:layout_marginTop="10dp"
         app:iconifiedByDefault="false"
-        app:queryHint="Nhập món chi tiêu"/>
+        app:queryHint="Nhập món chi tiêu"
+
+
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -45,7 +48,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/yellow"
+            android:background="@drawable/rounded_corner"
             android:text="Search" />
 
     </LinearLayout>
@@ -56,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:text="Tổng"
-        android:textColor="@color/yellow"
+        android:textColor="#9C271F"
         android:textSize="15dp" />
 
     <androidx.recyclerview.widget.RecyclerView

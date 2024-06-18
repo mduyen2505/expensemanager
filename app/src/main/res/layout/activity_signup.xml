@@ -12,15 +12,18 @@
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:padding="16dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@drawable/bg_home">
+
+
 
         <TextView
             android:id="@+id/registerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ĐĂNG KÍ"
-            android:textColor="@color/design_default_color_error"
-            android:textSize="24sp"
+            android:text="CREATE ACCOUNT "
+            android:textColor="@color/black"
+            android:textSize="34sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -35,15 +38,16 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="#6C6161"
-                android:src="@android:drawable/ic_menu_myplaces" />
+                android:src="@drawable/ic_user"/>
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Username"
-                android:inputType="text" />
+                android:hint="  Username"
+                android:inputType="text"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_corner"/>
         </LinearLayout>
 
         <LinearLayout
@@ -63,10 +67,11 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Password"
-                android:inputType="textPassword" />
+                android:hint="  Password"
+                android:inputType="textPassword"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_corner"/>
         </LinearLayout>
 
         <LinearLayout
@@ -86,10 +91,11 @@
             <EditText
                 android:id="@+id/repassword"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="RePassword"
-                android:inputType="textPassword" />
+                android:hint="  RePassword"
+                android:inputType="textPassword"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_corner"/>
         </LinearLayout>
 
         <Button
@@ -97,9 +103,9 @@
             android:layout_width="185dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#FF5E5E"
+            android:backgroundTint="#43B1BF"
             android:text="Đăng Kí"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/loginText"
@@ -109,7 +115,7 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="#9C27B0"
             android:text="Bạn đã có tài khoản? Đăng nhập ngay"
-            android:textColor="#EA6EFF" />
+            android:textColor="#9C27B0"/>
     </LinearLayout>
 
 

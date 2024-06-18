@@ -15,9 +15,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         app:itemTextColor="@color/navigation"
-        app:itemIconTint="@color/navigation"
+        app:itemIconTint="@color/white"
         android:layout_alignParentBottom="true"
         app:menu="@menu/navigation"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,7 +28,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="120dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="#858FC6"
         android:src="@drawable/them"
         />
 

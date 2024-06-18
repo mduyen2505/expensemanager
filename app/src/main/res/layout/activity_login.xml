@@ -12,14 +12,16 @@
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:padding="16dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@drawable/bg_home"
+        >
 
         <ImageView
             android:id="@+id/appLogo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            />
+            android:background="@drawable/logo" />
 
         <TextView
             android:id="@+id/appName"
@@ -43,15 +45,16 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="#7A7474"
-                android:src="@android:drawable/ic_menu_myplaces" />
+                android:src="@drawable/ic_user" />
 
             <EditText
                 android:id="@+id/username"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="45dp"
                 android:layout_weight="1"
-                android:hint="Tên đăng nhập"
-                android:inputType="text" />
+                android:hint="   Username"
+                android:inputType="text"
+                android:background="@drawable/rounded_corner"/>
         </LinearLayout>
 
         <LinearLayout
@@ -71,18 +74,19 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_weight="1"
-                android:hint="Password"
-                android:inputType="textPassword"     />
+                android:hint="   Password"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_corner"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="215dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="#00BCD4"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#43B1BF"
             android:text="Đăng nhập"
             android:src="@android:color/white" />
 
@@ -91,8 +95,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:text="Bạn chưa có tài khoản? Đăng kí"
+            android:layout_marginTop="8dp"
+            android:text="Bạn chưa có tài khoản? Đăng kí "
+            android:textSize="15dp"
             android:textColor="#9C27B0" />
     </LinearLayout>
 
