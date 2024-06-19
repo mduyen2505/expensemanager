@@ -88,6 +88,7 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="#43B1BF"
             android:text="Đăng nhập"
+            android:background="@drawable/rounded_corner"
             android:src="@android:color/white" />
 
         <TextView

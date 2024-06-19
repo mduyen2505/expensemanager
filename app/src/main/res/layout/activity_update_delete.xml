@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="vertical"
-        android:background="@color/yellow">
+        android:background="@drawable/gradient">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,25 +33,33 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="5dp"
-        android:background="@color/gray">
+        >
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/Title"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
             android:hint="Enter title"/>
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
             android:id="@+id/SpinderCategory"/>
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/Price"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
             android:hint="Enter price"/>
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/Date"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
             android:hint="Select Date"/>
 
 
@@ -64,26 +72,29 @@
         android:weightSum="3"
         android:layout_marginTop="20dp">
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:id="@+id/btUpdate"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
+            android:background="@drawable/button"
             android:text="Update"/>
         // thieu background button
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:id="@+id/btRemove"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
+            android:background="@drawable/button_remove"
             android:text="Remove"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:id="@+id/btBack"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
+            android:background="@drawable/button"
             android:text="Back"/>
 
 

@@ -64,7 +64,8 @@ public class FragmentStatistics extends Fragment implements RecycleViewAdapter.I
         }
 
         PieDataSet dataSet = new PieDataSet(entries, "Expense Categories");
-        dataSet.setColors(new int[]{Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.MAGENTA});
+        dataSet.setColors
+                (new int[]{Color.GRAY, Color.GREEN, Color.BLUE, Color.CYAN, Color.MAGENTA});
         PieData data = new PieData(dataSet);
 
         pieChart.setData(data);

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="vertical"
-        android:background="@color/yellow">
+        android:background="@drawable/gradient">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -31,25 +31,28 @@
         android:orientation="vertical"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="5dp"
-        android:background="@color/gray">
+        android:layout_marginRight="5dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Title"
+            android:layout_marginBottom="10dp"
             android:hint="Enter title"/>
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:id="@+id/SpinderCategory"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:id="@+id/Price"
             android:hint="Enter price"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:id="@+id/Date"
             android:hint="Select Date"/>
 
@@ -68,14 +71,15 @@
             android:id="@+id/btUpdate"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
+            android:background="@drawable/rounded_corner"
             android:text="Update"/>
-            // thieu background button
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btCancel"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
+            android:background="@drawable/rounded_corner"
             android:text="Cancel"/>
 
 

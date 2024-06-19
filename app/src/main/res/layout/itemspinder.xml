@@ -3,5 +3,5 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="15dp"
-    android:textColor="@color/green"
+    android:textColor="@color/black"
     xmlns:android="http://schemas.android.com/apk/res/android"/>

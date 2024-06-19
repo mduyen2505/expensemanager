@@ -105,6 +105,7 @@
             android:layout_marginTop="24dp"
             android:backgroundTint="#43B1BF"
             android:text="Đăng Kí"
+            android:background="@drawable/rounded_corner"
             android:textColor="@android:color/black" />
 
         <TextView
