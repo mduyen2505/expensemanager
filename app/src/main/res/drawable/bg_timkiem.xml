@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:type="linear"
+        android:angle="2"
+        android:startColor="#A28DB1"
+        android:endColor="#B5D1E2">
+
+    </gradient>
+    <corners android:radius="9dp"/> <!-- Độ bo tròn của góc -->
+</shape>
