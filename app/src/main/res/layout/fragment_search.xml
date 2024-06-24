@@ -80,12 +80,16 @@
 
     <TextView
         android:id="@+id/tong"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:text="Tổng"
-        android:textColor="#9C271F"
-        android:textSize="20dp"
+        android:text="Tổng:"
+        android:textColor="#FF5722"
+        android:background="@drawable/gradient"
+        android:fontFamily="serif"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="8dp"/>
     <LinearLayout
         android:layout_width="match_parent"

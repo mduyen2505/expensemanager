@@ -77,20 +77,22 @@
         android:weightSum="2"
         android:layout_marginTop="20dp">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
             android:id="@+id/btUpdate"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/rounded_corner"
+            android:textSize="20dp"
             android:text="Add"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
             android:id="@+id/btCancel"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/rounded_corner"
+            android:textSize="20dp"
             android:text="Cancel"/>
 
 

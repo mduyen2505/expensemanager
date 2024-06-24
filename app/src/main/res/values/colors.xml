@@ -8,7 +8,9 @@
     <color name="green">#F0F1EB</color>
     <color name="blue">#7A8DF3</color>
     <color name="gray">#FFF0F1EB</color>
-
+    <color name="burlywood">#DEB887</color>
+    <color name="colorDefault">#D8876E</color>
+    <color name="colorPressed">#F44336</color>
 
 
 
