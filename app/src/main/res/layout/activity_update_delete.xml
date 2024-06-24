@@ -12,6 +12,11 @@
         android:layout_height="80dp"
         android:orientation="vertical"
         android:background="@drawable/gradient">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -40,7 +45,7 @@
             android:id="@+id/Title"
             android:layout_marginBottom="10dp"
             android:background="@color/gray"
-            android:hint="Enter title"/>
+            android:hint="Nhập tiêu đề"/>
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -53,14 +58,14 @@
             android:id="@+id/Price"
             android:layout_marginBottom="10dp"
             android:background="@color/gray"
-            android:hint="Enter price"/>
+            android:hint="Nhập giá "/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/Date"
             android:layout_marginBottom="10dp"
             android:background="@color/gray"
-            android:hint="Select Date"/>
+            android:hint="Chọn ngày"/>
 
 
 
@@ -79,7 +84,6 @@
             android:layout_marginLeft="5dp"
             android:background="@drawable/button"
             android:text="Update"/>
-        // thieu background button
         <Button
             android:layout_width="30dp"
             android:layout_height="wrap_content"

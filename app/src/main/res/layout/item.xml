@@ -11,7 +11,8 @@
         android:weightSum="4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#D5D3D3">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,9 +42,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/Price"
             android:text=" 500K"
-            android:textColor="@color/yellow"
+            android:textColor="@color/red"
             android:layout_weight="1"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"

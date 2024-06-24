@@ -3,16 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+    android:background="#DCDCDC">
 
-
+    <!-- Phần Header LinearLayout với nền gradient -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="130dp"
         android:orientation="vertical"
-        android:background="@drawable/gradient"
+        android:background="@drawable/gradient">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="HOME"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="35dp">
 
-        >
+        </TextView>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -20,23 +30,36 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="Danh sách chi tiêu "
-            android:textColor="@color/black"
-            android:textSize="40dp"
+            android:text="Danh sách chi tiêu hôm nay"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tong"
+    <!-- Phần nội dung chính LinearLayout với nền màu trắng -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:textColor="@android:color/white"
-        android:layout_marginLeft="20dp"/>
+        android:layout_height="400dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bogoc"
+        >
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </LinearLayout>

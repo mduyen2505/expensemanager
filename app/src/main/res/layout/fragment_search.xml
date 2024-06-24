@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#DCDCDC"
+ >
 
     <SearchView
         android:layout_width="match_parent"
@@ -12,60 +14,95 @@
         android:layout_marginTop="10dp"
         app:iconifiedByDefault="false"
         app:queryHint="Nhập món chi tiêu"
+        android:background="@drawable/bogoc">
 
+    </SearchView>
 
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/from"
-        android:textSize="12dp"
-        android:hint="Chọn từ ngày" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/to"
-        android:textSize="12dp"
-        android:hint="Chọn đến ngày" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:orientation="vertical"
+        android:background="@drawable/bg_timkiem"
+        android:padding="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
 
-        <Spinner
-            android:layout_width="0dp"
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/from"
+            android:textSize="15dp"
+            android:hint="  Chọn từ ngày"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bogoc"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/to"
+            android:textSize="15dp"
+            android:hint="  Chọn đến ngày"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bogoc"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:id="@+id/spCategory"/>
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-        <Button
-            android:id="@+id/btnSearch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:text="Search" />
+            <Spinner
+                android:id="@+id/spCategory"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
 
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:text="Tìm kiếm"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/tong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:text="Tổng"
         android:textColor="#9C271F"
-        android:textSize="15dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recycleView"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bogoc"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
 
 </LinearLayout>
