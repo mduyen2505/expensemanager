@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#DCDCDC"
+    android:background="#CFE1C4"
  >
 
     <SearchView
@@ -70,7 +70,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/button"
                 android:text="Tìm kiếm"
                 android:layout_marginTop="5dp"/>
 
@@ -85,7 +85,6 @@
         android:layout_marginLeft="20dp"
         android:text="Tổng:"
         android:textColor="#FF5722"
-        android:background="@drawable/gradient"
         android:fontFamily="serif"
         android:textSize="30dp"
         android:textStyle="italic"

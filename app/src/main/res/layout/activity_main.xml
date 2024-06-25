@@ -28,7 +28,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="120dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="#858FC6"
+        android:backgroundTint="#B1C8B1"
         android:src="@drawable/them"
         />
 

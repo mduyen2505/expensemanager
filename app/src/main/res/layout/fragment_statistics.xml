@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="770dp"
     android:orientation="vertical"
-    android:background="#DCDCDC"
+    android:background="@drawable/bg_timkiem"
 
   >
 
@@ -18,13 +18,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Danh sách chi tiêu"
-            android:textColor="@android:color/black"
-            android:textSize="40dp"
-            android:gravity="center"
-            android:textStyle="bold"/>
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+            android:text="DANH SÁCH CHI TIÊU"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:gravity="center" />
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="-55dp"
+            android:background="@drawable/img_1" />
+
     </LinearLayout>
 
     <!-- Replace the CardView with PieChart -->

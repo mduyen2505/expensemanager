@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="800dp"
     android:orientation="vertical"
-    android:background="#DCDCDC">
+    android:background="#CFE1C4">
 
     <!-- Phần Header LinearLayout với nền gradient -->
     <LinearLayout
@@ -11,29 +11,25 @@
         android:layout_height="130dp"
         android:orientation="vertical"
         android:background="@drawable/gradient">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:text="HOME"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="35dp">
-
-        </TextView>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="Danh sách chi tiêu hôm nay"
-            android:textColor="@android:color/black"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:text="CHI TIÊU HÔM NAY"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="italic"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/img_1" />
     </LinearLayout>
 
     <!-- Phần nội dung chính LinearLayout với nền màu trắng -->

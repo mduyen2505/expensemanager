@@ -9,9 +9,9 @@
     tools:context=".AddActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="250dp"
         android:orientation="vertical"
-        android:background="@drawable/gradient">
+        android:background="@drawable/savingmoney">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -20,12 +20,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Chỉnh sửa chi tiêu"
-            android:textSize="22dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
+            android:text="CHỈNH SỬA CHI TIÊU"
+            android:fontFamily="sans-serif-black"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:layout_marginTop="-170dp"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:gravity="center">
 
         </TextView>
@@ -33,11 +33,11 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="600dp"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginRight="0dp"
         android:background="@drawable/bg_timkiem"
         >
         <EditText
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="3"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="-350dp">
         <Button
             android:layout_width="20dp"
             android:layout_height="50dp"
@@ -112,7 +112,5 @@
 
 
     </LinearLayout>
-
-
 
 </LinearLayout>

@@ -3,9 +3,9 @@
     <gradient
         android:type="linear"
         android:angle="2"
-        android:startColor="#A28DB1"
-        android:endColor="#B5D1E2">
+        android:startColor="#E1F1D0"
+        android:endColor="#A7EDDF">
 
     </gradient>
-    <corners android:radius="9dp"/> <!-- Độ bo tròn của góc -->
+    <corners android:radius="45dp"/> <!-- Độ bo tròn của góc -->
 </shape>

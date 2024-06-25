@@ -2,17 +2,17 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <solid android:color="#517752" /> <!-- Màu nền khi nhấn -->
+            <solid android:color="#6FC8AA" /> <!-- Màu nền khi nhấn -->
             <corners android:radius="46dp"/>
-            <stroke android:width="10dp"
+            <stroke android:width="2dp"
                 android:color="@color/white"/> <!-- Đường viền của TextView -->
         </shape>
     </item>
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="46dp"/>
-            <solid android:color="#4CAF50" /> <!-- Màu nền mặc định -->
-            <stroke android:width="10dp"
+            <solid android:color="#0EF1A5" /> <!-- Màu nền mặc định -->
+            <stroke android:width="2dp"
                 android:color="@color/white"/> <!-- Đường viền của TextView -->
         </shape>
     </item>
