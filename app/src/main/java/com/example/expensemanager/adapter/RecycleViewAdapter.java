@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.expensemanager.R;
+import com.example.expensemanager.model.Item; // Import lớp Item từ package model
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +19,10 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     private ItemListener itemListener;
 
     public RecycleViewAdapter() {
-
         list = new ArrayList<>();
     }
 
     public void setItemListener(ItemListener itemListener) {
-
         this.itemListener = itemListener;
     }
 
@@ -34,7 +32,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
     public Item getItem(int position) {
-
         return list.get(position);
     }
 
@@ -56,7 +53,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @Override
     public int getItemCount() {
-
         return list.size();
     }
 
@@ -82,41 +78,5 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     public interface ItemListener {
         void onItemClick(View view, int position);
-    }
-
-    // Assuming you have a custom Item class
-    public static class Item implements Serializable {
-        private String title;
-        private String category;
-        private String price;
-        private String date;
-
-        public Item(int id, String title, String category, String price, String date) {
-            this.title = title;
-            this.category = category;
-            this.price = price;
-            this.date = date;
-        }
-        public String getTitle() {
-            return title;
-        }
-
-        public String getCategory() {
-            return category;
-        }
-
-        public String getPrice() {
-            return price;
-        }
-
-        public String getDate() {
-            return date;
-        }
-
-        public int getId() {
-            return 1;
-        }
-
-
     }
 }

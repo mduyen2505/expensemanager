@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.expensemanager.R;
 import com.example.expensemanager.adapter.RecycleViewAdapter;
 import com.example.expensemanager.dal.SQLiteHelper;
+import com.example.expensemanager.model.Item;
 
 import java.util.Calendar;
 import java.util.List;
@@ -49,7 +50,7 @@ public class FragmentSearch extends Fragment implements View.OnClickListener{
         initView(view);
         adapter = new RecycleViewAdapter();
         db = new SQLiteHelper(getContext());
-        List<RecycleViewAdapter.Item> list = db.getAll();
+        List<Item> list = db.getAll();
         adapter.setList(list);
         tvTong.setText("Tổng tiền: " + tong(list) + "K");
         LinearLayoutManager manager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
@@ -64,7 +65,7 @@ public class FragmentSearch extends Fragment implements View.OnClickListener{
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                List<RecycleViewAdapter.Item> list = db.searchByTitle(newText);
+                List<Item> list = db.searchByTitle(newText);
                 tvTong.setText("Tổng tiền: " + tong(list));
                 adapter.setList(list);
                 return true;
@@ -79,7 +80,7 @@ public class FragmentSearch extends Fragment implements View.OnClickListener{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String cate = spCategory.getItemAtPosition(position).toString();
-                List<RecycleViewAdapter.Item> list;
+                List<Item> list;
                 if (!cate.equalsIgnoreCase("all")) {
                     list = db.searchByCategory(cate);
                 } else {
@@ -95,9 +96,9 @@ public class FragmentSearch extends Fragment implements View.OnClickListener{
         });
     }
 
-    private int tong(List<RecycleViewAdapter.Item> list) {
+    private int tong(List<Item> list) {
         int t = 0;
-        for (RecycleViewAdapter.Item i : list) {
+        for (Item i : list) {
             try {
                 t += Integer.parseInt(i.getPrice());
             } catch (NumberFormatException e) {
@@ -156,7 +157,7 @@ public class FragmentSearch extends Fragment implements View.OnClickListener{
             String from = efrom.getText().toString();
             String to = eto.getText().toString();
             if (!from.isEmpty() && !to.isEmpty()) {
-                List<RecycleViewAdapter.Item> list = db.searchByDateFromTo(from, to);
+                List<Item> list = db.searchByDateFromTo(from, to);
                 adapter.setList(list);
                 tvTong.setText("Tổng tiền: " + tong(list));
             }

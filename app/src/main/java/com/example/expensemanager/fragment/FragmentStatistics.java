@@ -16,13 +16,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.expensemanager.R;
 import com.example.expensemanager.UpdateDeleteActivity;
 import com.example.expensemanager.adapter.RecycleViewAdapter;
-import com.example.expensemanager.adapter.RecycleViewAdapter.Item;
 import com.example.expensemanager.dal.SQLiteHelper;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.example.expensemanager.model.Item; // Import lớp Item từ package model
 
 import java.io.Serializable;
 import java.util.ArrayList;

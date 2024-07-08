@@ -17,8 +17,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.expensemanager.adapter.RecycleViewAdapter.Item;
 import com.example.expensemanager.dal.SQLiteHelper;
+import com.example.expensemanager.model.Item;
 
 import java.util.Calendar;
 
@@ -78,7 +78,6 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View view) {
-        SQLiteHelper db = new SQLiteHelper(this);
         if (view == Date) {
             final Calendar c = Calendar.getInstance();
             int year = c.get(Calendar.YEAR);
@@ -100,9 +99,9 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
             String c = sp.getSelectedItem().toString();
             String d = Date.getText().toString();
             if (!t.isEmpty() && p.matches("\\d+")) {
-                int id=item.getId();
-                Item i =new Item(id,t,c,p,d);
-                db=new SQLiteHelper(this);
+                int id =item.getId();
+                Item i = new Item(item.getId(), t, c, p, d);
+                SQLiteHelper db=new SQLiteHelper(this);
                 db.update(i);
                 finish();
             }
@@ -114,7 +113,7 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
             builder.setMessage("Bạn có chắc muốn xóa " + item.getTitle() + " không?");
             builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(DialogInterface dialog, int which) {
+                public void onClick(DialogInterface dialogInterface, int i) {
                     SQLiteHelper bb=new SQLiteHelper(getApplicationContext());
                     bb.delete(id);
                     finish();
@@ -122,9 +121,14 @@ public class UpdateDeleteActivity extends AppCompatActivity implements View.OnCl
 
 
             });
-            builder.setNegativeButton("Không", (dialog, which) -> {
-                // Do nothing
-            });
+            builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+
+                    // Do nothing
+         });
             AlertDialog dialog = builder.create();
             dialog.show();
         }

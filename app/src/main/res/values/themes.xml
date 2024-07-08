@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Expensemanager" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- <Item name="colorPrimary">@color/my_light_primary</Item> -->
     </style>
 
     <style name="Theme.Expensemanager" parent="Base.Theme.Expensemanager" />

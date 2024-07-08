@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.expensemanager.adapter.RecycleViewAdapter;
+import com.example.expensemanager.model.Item;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,8 +76,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
 
     // Lay tat ca theo thoi gian
-    public List<RecycleViewAdapter.Item> getAll() {
-        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+    public List<Item> getAll() {
+        List<Item> list = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
         String order = "date DESC";
         Cursor rs = db.query("items", null, null, null, null, null, order);
@@ -88,7 +88,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             String category = rs.getString(2);
             String price = rs.getString(3);
             String date = rs.getString(4);
-            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+            list.add(new Item(id, title, category, price, date));
         }
 
         if (rs != null) {
@@ -98,19 +98,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         return list;
     }
 
-    public long addItem(RecycleViewAdapter.Item i) {
-        ContentValues values = new ContentValues();
-        values.put("title", i.getTitle());
-        values.put("category", i.getCategory());
-        values.put("price", i.getPrice());
-        values.put("date", i.getDate());
-        SQLiteDatabase db = getWritableDatabase();
-        return db.insert("items", null, values);
-    }
+
 
     // Lay theo date
-    public List<RecycleViewAdapter.Item> getByDate(String date) {
-        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+    public List<Item> getByDate(String date) {
+        List<Item> list = new ArrayList<>();
         String whereClause = "date like ?";
         String[] whereArgs = {date};
         SQLiteDatabase st = getReadableDatabase();
@@ -120,34 +112,41 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             String title = rs.getString(1);
             String category = rs.getString(2);
             String price = rs.getString(3);
-            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+            list.add(new Item(id, title, category, price, date));
         }
         return list;
     }
-
-    public void update(RecycleViewAdapter.Item item) {
+    public long addItem(Item i) {
         ContentValues values = new ContentValues();
-        values.put("title", item.getTitle());
-        values.put("category", item.getCategory());
-        values.put("price", item.getPrice());
-        values.put("date", item.getDate());
-
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        values.put("title", i.getTitle());
+        values.put("category", i.getCategory());
+        values.put("price", i.getPrice());
+        values.put("date", i.getDate());
+        SQLiteDatabase db = getWritableDatabase();
+        return db.insert("items", null, values);
+    }
+    public int update(Item i) {
+        ContentValues values = new ContentValues();
+        values.put("title", i.getTitle());
+        values.put("category", i.getCategory());
+        values.put("price", i.getPrice());
+        values.put("date", i.getDate());
+        SQLiteDatabase db = getWritableDatabase();
         String whereClause = "id=?";
-        String[] whereArgs = {Integer.toString(item.getId())};
-        sqLiteDatabase.update("items", values, whereClause, whereArgs);
+        String[] whereArgs = {Integer.toString(i.getId())};
+        return db.update("items", values, whereClause, whereArgs);
     }
 
-    public void delete(int id) {
+    public int delete(int id) {
         String whereClause = "id=?";
         String[] whereArgs = {Integer.toString(id)};
 
-        SQLiteDatabase db = getWritableDatabase();
-        db.delete("items", whereClause, whereArgs);
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        return sqLiteDatabase.delete("items", whereClause, whereArgs);
     }
 
-    public List<RecycleViewAdapter.Item> searchByTitle(String key) {
-        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+    public List<Item> searchByTitle(String key) {
+        List<Item> list = new ArrayList<>();
         String whereClause = "title like ?";
         String[] whereArgs = {"%"+key+"%"};
         SQLiteDatabase st = getReadableDatabase();
@@ -158,12 +157,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             String category = rs.getString(2);
             String price = rs.getString(3);
             String date =rs.getString(4);
-            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+            list.add(new Item(id, title, category, price, date));
         }
         return list;
     }
-    public List<RecycleViewAdapter.Item> searchByCategory(String Category) {
-        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+    public List<Item> searchByCategory(String Category) {
+        List<Item> list = new ArrayList<>();
         String whereClause = "Category like ?";
         String[] whereArgs = {Category};
         SQLiteDatabase st = getReadableDatabase();
@@ -174,12 +173,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             String category = rs.getString(2);
             String price = rs.getString(3);
             String date =rs.getString(4);
-            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+            list.add(new Item(id, title, category, price, date));
         }
         return list;
     }
-    public List<RecycleViewAdapter.Item> searchByDateFromTo(String from, String to) {
-        List<RecycleViewAdapter.Item> list = new ArrayList<>();
+    public List<Item> searchByDateFromTo(String from, String to) {
+        List<Item> list = new ArrayList<>();
         String whereClause = "date BETWEEN ? AND ?";
         String[] whereArgs = {from.trim(),to.trim()};
         SQLiteDatabase st = getReadableDatabase();
@@ -190,7 +189,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             String category = rs.getString(2);
             String price = rs.getString(3);
             String date =rs.getString(4);
-            list.add(new RecycleViewAdapter.Item(id, title, category, price, date));
+            list.add(new Item(id, title, category, price, date));
         }
         return list;
     }

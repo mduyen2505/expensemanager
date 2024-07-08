@@ -12,6 +12,7 @@ import com.example.expensemanager.fragment.FragmentStatistics;
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+
         super(fm, behavior);
     }
 

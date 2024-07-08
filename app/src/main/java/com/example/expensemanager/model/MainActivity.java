@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 // Xác định trang hiện tại và cập nhật trạng thái của BottomNavigationView
                 if (position == 0) {
-                    navigationView.getMenu().findItem(R.id.tong).setChecked(true);
+                    navigationView.getMenu().findItem(R.id.home).setChecked(true);
                 } else if (position == 1) {
                     navigationView.getMenu().findItem(R.id.timkiem).setChecked(true);
                 } else if (position == 2) {
@@ -91,9 +91,9 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                // Xác định menu item được chọn và chuyển đổi tới trang tương ứng trong ViewPager
+                // Xác định menu Item được chọn và chuyển đổi tới trang tương ứng trong ViewPager
                 int id = menuItem.getItemId();
-                if (id == R.id.tong) {
+                if (id == R.id.home) {
                     viewPager.setCurrentItem(0);
                 } else if (id == R.id.timkiem) {
                     viewPager.setCurrentItem(1);

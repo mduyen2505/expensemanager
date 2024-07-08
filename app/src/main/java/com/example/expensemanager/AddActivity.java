@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.example.expensemanager.model.Item; // Import lớp Item từ package model
 
-import com.example.expensemanager.adapter.RecycleViewAdapter;
 import com.example.expensemanager.dal.SQLiteHelper;
 
 import java.util.Calendar;
@@ -75,7 +75,7 @@ public class AddActivity extends AppCompatActivity implements View.OnClickListen
             String c = sp.getSelectedItem().toString();
             String d = Date.getText().toString();
             if (!t.isEmpty() && p.matches("\\d+")) {
-                RecycleViewAdapter.Item i = new RecycleViewAdapter.Item(0, t, c, p, d);
+                Item i = new Item(0, t, c, p, d);
                 SQLiteHelper db = new SQLiteHelper(this);
                 db.addItem(i);
                 finish();
